@@ -1,5 +1,8 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.IO;
+using System.Runtime.CompilerServices;
+using System.Windows;
 using Cryptology.Caesar.Algorithm;
+using Cryptology.Core;
 using Cryptology.Core.Extensions;
 
 namespace Cryptology.UI
@@ -9,20 +12,88 @@ namespace Cryptology.UI
         private int shift;
         private string inputText;
         private string outputText;
-        private bool isEncode;
         private string actionText;
+        private bool isEncode;
+        private bool isAnalyzingCompleted;
+        private Visibility analyzeButtonVisibility;
+        private Visibility detailsButtonVisibility;
 
         #region Constructor
         public CaesarViewModel()
         {
             this.Algorithm = new CaesarAlgorithm();
+            this.Analyzer = new CaesarFrequencyAnalyzer();
             this.IsEncode = true;
             this.Shift = default;
+            this.TextAnalyzingPerformed = false;
+            this.IsAnalyzingCompleted = false;
+            this.DetailsButtonVisibility = Visibility.Collapsed;
         }
         #endregion
 
         #region Properties
         public CaesarAlgorithm Algorithm { get; }
+
+        public CaesarFrequencyAnalyzer Analyzer { get; set; }
+
+        public bool TextAnalyzingPerformed { get; set; }
+
+        public bool IsAnalyzingCompleted
+        {
+            get
+            {
+                return this.isAnalyzingCompleted;
+            }
+            set
+            {
+                if (this.isAnalyzingCompleted != value)
+                {
+                    this.isAnalyzingCompleted = value;
+                    this.OnProtertyChanged();
+
+                    if (this.isAnalyzingCompleted)
+                    {
+                        this.DetailsButtonVisibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        this.DetailsButtonVisibility = Visibility.Collapsed;
+                    }
+                }
+            }
+        }
+
+        public Visibility DetailsButtonVisibility
+        {
+            get
+            {
+                return this.detailsButtonVisibility;
+            }
+            set
+            {
+                if (this.detailsButtonVisibility != value)
+                {
+                    this.detailsButtonVisibility = value;
+                    this.OnProtertyChanged();
+                }
+            }
+        }
+
+        public Visibility AnalyzeButtonVisibility
+        {
+            get
+            {
+                return this.analyzeButtonVisibility;
+            }
+            set
+            {
+                if (this.analyzeButtonVisibility != value)
+                {
+                    this.analyzeButtonVisibility = value;
+                    this.OnProtertyChanged();
+                }
+            }
+        }
 
         public string ActionText
         {
@@ -57,10 +128,12 @@ namespace Cryptology.UI
                     if (this.isEncode)
                     {
                         this.ActionText = "Encode";
+                        this.AnalyzeButtonVisibility = Visibility.Collapsed;
                     }
                     else
                     {
                         this.ActionText = "Decode";
+                        this.AnalyzeButtonVisibility = Visibility.Visible;
                     }
                 }
             }
@@ -126,6 +199,33 @@ namespace Cryptology.UI
             else
             {
                 this.OutputText = this.Algorithm.Decode(this.InputText.ToBytes());
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void Analyze()
+        {
+            try
+            {
+                if (this.TextAnalyzingPerformed == false)
+                {
+                    using (var reader = new StreamReader(GlobalConstants.TextFilePath, this.Algorithm.Encoding))
+                    {
+                        var text = reader.ReadToEnd();
+                        this.Analyzer.AnalyzeText(text);
+                    }
+
+                    this.TextAnalyzingPerformed = true;
+                }
+
+                this.Analyzer.AnalyzeCryptoText(this.InputText);
+                this.IsAnalyzingCompleted = true;
+
+                this.OutputText = this.Analyzer.TryEncode(this.InputText);
+            }
+            catch (FileNotFoundException e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
     }

@@ -24,7 +24,7 @@
                  MinHeight="35"
                  Height="auto" 
                  TextWrapping="Wrap" 
-                 Text="{Binding InputText, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"
+                 Text="{Binding InputText, BindsDirectlyToSource=True, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"
                  Margin="10 10 10 10"
                  VerticalContentAlignment="Center"/>
 
@@ -84,19 +84,45 @@
                     </StackPanel>
                 </Grid>
             </GroupBox>
-            
-            <Button x:Name="btnProcess"
+
+            <StackPanel Margin="0 0 10 0" Grid.Column="1">
+                <Button x:Name="btnProcess"
                 Grid.Column="1"
                 VerticalAlignment="Top"
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
                 HorizontalAlignment="Right"
                 Content="{Binding ActionText}"
-                Margin="0 0 10 0"
+                Margin="0 10 0 5"
                 Width="120"
                 Height="30"
                 Click="BtnProcessClick">
-            </Button>
+                </Button>
+
+                <Button x:Name="btnAnalyze"
+                    Grid.Column="1"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Content="Analyze"
+                    Margin="0 5 0 0"
+                    Width="120"
+                    Height="30"
+                    Click="BtnAnalyzeClick"
+                    Visibility="{Binding AnalyzeButtonVisibility}"/>
+
+                <Button x:Name="btnDetails"
+                    Grid.Column="1"
+                    VerticalAlignment="Top"
+                    VerticalContentAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Content="Details"
+                    Margin="0 5 0 0"
+                    Width="120"
+                    Height="30"
+                    Click="BtnDetailsClick"
+                    Visibility="{Binding DetailsButtonVisibility}"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

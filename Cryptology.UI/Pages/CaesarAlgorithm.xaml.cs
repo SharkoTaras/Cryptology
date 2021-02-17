@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Cryptology.UI
@@ -18,16 +19,29 @@ namespace Cryptology.UI
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private void BtnProcessClick(object sender, System.Windows.RoutedEventArgs e)
+        private void BtnProcessClick(object sender, RoutedEventArgs e)
         {
             this.viewModel.Process();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private void CbModeClick(object sender, System.Windows.RoutedEventArgs e)
+        private void CbModeClick(object sender, RoutedEventArgs e)
         {
             this.viewModel.InputText = string.Empty;
             this.viewModel.OutputText = string.Empty;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private void BtnAnalyzeClick(object sender, RoutedEventArgs e)
+        {
+            this.viewModel.Analyze();
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private void BtnDetailsClick(object sender, RoutedEventArgs e)
+        {
+            var detailsWindow = new AnalyzingDetailsWindow(this.viewModel.Analyzer);
+            detailsWindow.Show();
         }
     }
 }
