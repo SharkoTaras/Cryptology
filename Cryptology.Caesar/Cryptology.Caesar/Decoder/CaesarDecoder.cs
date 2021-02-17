@@ -7,6 +7,12 @@ namespace Cryptology.Caesar.Decoder
     public class CaesarDecoder : IDecoder
     {
         #region Constructors
+        public CaesarDecoder()
+        {
+            this.Shift = default;
+            this.Encoding = Encoding.UTF8;
+        }
+
         public CaesarDecoder(int shift, Encoding encoding)
         {
             this.Shift = shift;
@@ -19,9 +25,9 @@ namespace Cryptology.Caesar.Decoder
         #endregion
 
         #region Properties
-        public int Shift { get; }
+        public int Shift { get; set; }
 
-        public Encoding Encoding { get; }
+        public Encoding Encoding { get; set; }
         #endregion
 
         public string Decode(byte[] bytes)

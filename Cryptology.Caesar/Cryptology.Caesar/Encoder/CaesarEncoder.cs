@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.CompilerServices;
+using System.Text;
 using Cryptology.Core.Encoder;
 using Cryptology.Core.Extensions;
 
@@ -7,6 +8,12 @@ namespace Cryptology.Caesar.Encoder
     public class CaesarEncoder : IEncoder
     {
         #region Constructors
+        public CaesarEncoder()
+        {
+            this.Shift = default;
+            this.Encoding = Encoding.UTF8;
+        }
+
         public CaesarEncoder(int shift, Encoding encoding)
         {
             this.Shift = shift;
@@ -19,11 +26,12 @@ namespace Cryptology.Caesar.Encoder
         #endregion
 
         #region Properties
-        public int Shift { get; }
+        public int Shift { get; set; }
 
-        public Encoding Encoding { get; }
+        public Encoding Encoding { get; set; }
         #endregion
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public byte[] Encode(string str)
         {
             var sb = new StringBuilder(str.Length);
