@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.Core", "..\Crypt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.ConsoleUI", "..\Console.UI\Cryptology.ConsoleUI.csproj", "{3E528C1F-36D7-4AF9-A1C7-DE5A5AB79F82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptology.UI", "..\Cryptology.UI\Cryptology.UI.csproj", "{468241BE-D0C4-4A4C-836D-FC4BC50267EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.UI", "..\Cryptology.UI\Cryptology.UI.csproj", "{468241BE-D0C4-4A4C-836D-FC4BC50267EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", "{F9328C30-3B3F-4443-AF94-C9DDFB2898B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Criptology.Afine", "Criptology.Afine\Criptology.Afine.csproj", "{DF95170B-C8ED-4B29-9186-45F91C97608C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,17 @@ Global
 		{468241BE-D0C4-4A4C-836D-FC4BC50267EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{468241BE-D0C4-4A4C-836D-FC4BC50267EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{468241BE-D0C4-4A4C-836D-FC4BC50267EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF95170B-C8ED-4B29-9186-45F91C97608C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF95170B-C8ED-4B29-9186-45F91C97608C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF95170B-C8ED-4B29-9186-45F91C97608C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF95170B-C8ED-4B29-9186-45F91C97608C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4E4F6488-A052-4EE0-8C40-75A095A2C2DB} = {F9328C30-3B3F-4443-AF94-C9DDFB2898B7}
+		{DF95170B-C8ED-4B29-9186-45F91C97608C} = {F9328C30-3B3F-4443-AF94-C9DDFB2898B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A30A7E4-586A-4D95-8899-30E3C20BD434}

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Cryptology.Caesar.Algorithm
@@ -38,16 +39,16 @@ namespace Cryptology.Caesar.Algorithm
             var textCountList = this.TextLettersFrequency.Select(kvp => kvp).OrderByDescending(kvp => kvp.Value).ToList();
             var sb = new StringBuilder(text.Length);
 
-            foreach (var letter in text)
+            foreach (var letter in text.ToLower())
             {
                 if (char.IsLetter(letter) == false)
                 {
                     sb.Append(letter);
                     continue;
                 }
-
                 var kvp = cryptoCountList.FirstOrDefault(kvp => kvp.Key == letter);
-                var l = textCountList[cryptoCountList.IndexOf(kvp)];
+                var index = cryptoCountList.IndexOf(kvp);
+                var l = textCountList[index];
 
                 sb.Append(l.Key);
             }
@@ -55,17 +56,20 @@ namespace Cryptology.Caesar.Algorithm
             return sb.ToString();
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void AnalyzeText(string text)
         {
             this.AnalyzeText(text, TextType.Normal);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void AnalyzeCryptoText(string text)
         {
             this.AnalyzeText(text, TextType.Crypto);
         }
 
         #region Helper Methods
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void AnalyzeText(string text, TextType textType)
         {
             Dictionary<char, uint> letterFrequency;

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.CompilerServices;
+using System.Text;
 using Cryptology.Core.Decoder;
 using Cryptology.Core.Extensions;
 
@@ -7,18 +8,21 @@ namespace Cryptology.Caesar.Decoder
     public class CaesarDecoder : IDecoder
     {
         #region Constructors
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public CaesarDecoder()
         {
             this.Shift = default;
             this.Encoding = Encoding.UTF8;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public CaesarDecoder(int shift, Encoding encoding)
         {
             this.Shift = shift;
             this.Encoding = encoding;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public CaesarDecoder(int shift) : this(shift, Encoding.UTF8)
         {
         }
@@ -30,6 +34,7 @@ namespace Cryptology.Caesar.Decoder
         public Encoding Encoding { get; set; }
         #endregion
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string Decode(byte[] bytes)
         {
             var str = bytes.FromBytes(this.Encoding);

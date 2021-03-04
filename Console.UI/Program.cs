@@ -10,8 +10,10 @@ namespace Cryptology.ConsoleUI
     {
         private static void Main(string[] args)
         {
+            var str = "Hello world";
+            Console.WriteLine(str.Replace("Hello", string.Empty));
             //Algorithm();
-            FrequencyAnalysis();
+            //FrequencyAnalysis();
         }
 
         private static void Algorithm()
