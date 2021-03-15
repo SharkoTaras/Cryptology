@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Vijender\Cryptology.Vijender.csproj" />
+    <ProjectReference Include="..\Cryptology.Caesar\Criptology.Afine\Criptology.Affine.csproj" />
     <ProjectReference Include="..\Cryptology.Caesar\Cryptology.Caesar\Cryptology.Caesar.csproj" />
+    <ProjectReference Include="..\Cryptology.Caesar\Cryptology.Cardano\Cryptology.Cardano.csproj" />
+    <ProjectReference Include="..\Cryptology.Caesar\Cryptology.Rail\Cryptology.Rail.csproj" />
     <ProjectReference Include="..\Cryptology.Core\Cryptology.Core.csproj" />
   </ItemGroup>
 

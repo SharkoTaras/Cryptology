@@ -26,9 +26,140 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\Cryptology.Vijender.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\Cryptology.Vijender.csproj"
+              },
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj"
+              },
               "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\Cryptology.Caesar.csproj": {
                 "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\Cryptology.Caesar.csproj"
               },
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\Cryptology.Cardano.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\Cryptology.Cardano.csproj"
+              },
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\Cryptology.Rail.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\Cryptology.Rail.csproj"
+              },
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\Cryptology.Vijender.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\Cryptology.Vijender.csproj",
+        "projectName": "Cryptology.Vijender",
+        "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\Cryptology.Vijender.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\Cryptology.Caesar.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\Cryptology.Caesar.csproj"
+              },
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj",
+        "projectName": "Criptology.Affine",
+        "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
               "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj": {
                 "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj"
               }
@@ -70,6 +201,122 @@
         "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\Cryptology.Caesar.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\Cryptology.Cardano.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\Cryptology.Cardano.csproj",
+        "projectName": "Cryptology.Cardano",
+        "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\Cryptology.Cardano.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Extreme.Numerics": {
+              "target": "Package",
+              "version": "[7.0.18, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\Cryptology.Rail.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\Cryptology.Rail.csproj",
+        "projectName": "Cryptology.Rail",
+        "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\Cryptology.Rail.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

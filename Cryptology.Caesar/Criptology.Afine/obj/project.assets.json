@@ -32,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Afine.csproj",
-      "projectName": "Criptology.Afine",
-      "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Afine.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj",
+      "projectName": "Criptology.Affine",
+      "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\obj\\",
       "projectStyle": "PackageReference",

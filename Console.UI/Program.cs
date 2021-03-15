@@ -1,19 +1,81 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using Criptology.Afine.Algorithm;
 using Cryptology.Caesar.Algorithm;
+using Cryptology.Cardano;
+using Cryptology.Core;
+using Cryptology.Core.Algorithm;
 using Cryptology.Core.Extensions;
+using Cryptology.Rail.Algorithm;
+using Cryptology.Vijender.Algorithm;
+using Unity;
 
 namespace Cryptology.ConsoleUI
 {
     public class Program
     {
+        private static IUnityContainer container;
+
+        private static void ConfigureContainer()
+        {
+            container = new UnityContainer();
+            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Caesar, (c) => new CaesarAlgorithm(3));
+
+            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Affine, (c) => new AffineAlgorithm(3, 5));
+
+            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Cardano, (c) => new CardanoAlgorithm());
+
+            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Rail, (c) => new RailAlgorithm(3));
+
+            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Vijender, (c) => new VijenderAlgorithm("hello"));
+        }
+
         private static void Main(string[] args)
         {
-            var str = "Hello world";
-            Console.WriteLine(str.Replace("Hello", string.Empty));
-            //Algorithm();
-            //FrequencyAnalysis();
+            ConfigureContainer();
+            var alg = container.Resolve<IAlgorithm>(GlobalConstants.Algorithms.Vijender);
+
+            var code = alg.Encode("hello my name is taras");
+
+            Console.WriteLine(code.FromBytes());
+
+            var text = alg.Decode(code);
+
+            Console.WriteLine(text);
+        }
+
+        private static void RailAlgorithmTimeTest()
+        {
+            var text = new string('a', 10000);
+            var sw = Stopwatch.StartNew();
+            var alg = new RailAlgorithm(3);
+            Console.WriteLine("Encode");
+            for (var i = 0; i < 500; i++)
+            {
+                alg.Encode(text);
+            }
+            sw.Stop();
+            Console.WriteLine($"Time: {sw.ElapsedMilliseconds / 1000f} s");
+            Console.WriteLine($"Time: {sw.ElapsedMilliseconds * 10e6f} ns");
+            Console.WriteLine("Decode");
+            sw = Stopwatch.StartNew();
+            for (var i = 0; i < 500; i++)
+            {
+                alg.Decode(text.ToBytes());
+            }
+            sw.Stop();
+            Console.WriteLine($"Time: {sw.ElapsedMilliseconds / 1000f} s");
+            Console.WriteLine($"Time: {sw.ElapsedMilliseconds * 10e6f} ns");
+
+
+            var h = alg.Encode("hello");
+            Console.WriteLine(h.FromBytes());
+
+            var hh = alg.Decode(h);
+
+            Console.WriteLine(hh);
         }
 
         private static void Algorithm()

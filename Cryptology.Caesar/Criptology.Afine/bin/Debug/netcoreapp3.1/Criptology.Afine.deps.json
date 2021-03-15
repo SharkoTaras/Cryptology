@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Criptology.Afine/1.0.0": {
+        "dependencies": {
+          "Cryptology.Core": "1.0.0"
+        },
+        "runtime": {
+          "Criptology.Afine.dll": {}
+        }
+      },
+      "Cryptology.Core/1.0.0": {
+        "runtime": {
+          "Cryptology.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Criptology.Afine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cryptology.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

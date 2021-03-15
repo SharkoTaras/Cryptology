@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\bin\Debug\netcoreapp3.1\Criptology.Affine.deps.json
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\bin\Debug\netcoreapp3.1\Criptology.Affine.dll
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\bin\Debug\netcoreapp3.1\Criptology.Affine.pdb
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\bin\Debug\netcoreapp3.1\Cryptology.Core.dll
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\bin\Debug\netcoreapp3.1\Cryptology.Core.pdb
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\obj\Debug\netcoreapp3.1\Criptology.Affine.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\obj\Debug\netcoreapp3.1\Criptology.Affine.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\obj\Debug\netcoreapp3.1\Criptology.Affine.AssemblyInfo.cs
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\obj\Debug\netcoreapp3.1\Criptology.Affine.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\obj\Debug\netcoreapp3.1\Criptology.Affine.csproj.CopyComplete
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\obj\Debug\netcoreapp3.1\Criptology.Affine.dll
+C:\Users\user\Desktop\Cryptology\Cryptology.Caesar\Criptology.Afine\obj\Debug\netcoreapp3.1\Criptology.Affine.pdb

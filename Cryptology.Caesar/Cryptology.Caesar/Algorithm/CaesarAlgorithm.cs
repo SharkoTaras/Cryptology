@@ -8,26 +8,28 @@ namespace Cryptology.Caesar.Algorithm
 {
     public class CaesarAlgorithm : IAlgorithm
     {
+        #region Private firelds
         private readonly CaesarDecoder decoder;
         private readonly CaesarEncoder encoder;
         private Encoding encoding;
-        private int shift;
+        private int shift; 
+        #endregion
 
         #region Constructors
         public CaesarAlgorithm()
         {
-            this.decoder = new CaesarDecoder();
-            this.encoder = new CaesarEncoder();
-            this.Shift = default;
-            this.Encoding = Encoding.UTF8;
+            decoder = new CaesarDecoder();
+            encoder = new CaesarEncoder();
+            Shift = default;
+            Encoding = Encoding.UTF8;
         }
 
         public CaesarAlgorithm(int shift, Encoding encoding)
         {
-            this.Shift = shift;
-            this.Encoding = encoding;
-            this.decoder = new CaesarDecoder(this.Shift, encoding);
-            this.encoder = new CaesarEncoder(this.Shift, encoding);
+            decoder = new CaesarDecoder(shift, encoding);
+            encoder = new CaesarEncoder(shift, encoding);
+            Shift = shift;
+            Encoding = encoding;
         }
 
         public CaesarAlgorithm(int shift) : this(shift, Encoding.UTF8)
@@ -40,15 +42,15 @@ namespace Cryptology.Caesar.Algorithm
         {
             get
             {
-                return this.shift;
+                return shift;
             }
             set
             {
-                if (value != this.shift)
+                if (value != shift)
                 {
-                    this.shift = value;
-                    this.decoder.Shift = value;
-                    this.encoder.Shift = value;
+                    shift = value;
+                    decoder.Shift = value;
+                    encoder.Shift = value;
                 }
             }
         }
@@ -57,16 +59,16 @@ namespace Cryptology.Caesar.Algorithm
         {
             get
             {
-                return this.encoding;
+                return encoding;
             }
 
             set
             {
-                if (this.encoding != value)
+                if (encoding != value)
                 {
-                    this.encoding = value;
-                    this.encoder.Encoding = value;
-                    this.decoder.Encoding = value;
+                    encoding = value;
+                    encoder.Encoding = value;
+                    decoder.Encoding = value;
                 }
             }
         }
@@ -75,13 +77,13 @@ namespace Cryptology.Caesar.Algorithm
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string Decode(byte[] bytes)
         {
-            return this.decoder.Decode(bytes);
+            return decoder.Decode(bytes);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public byte[] Encode(string str)
         {
-            return this.encoder.Encode(str);
+            return encoder.Encode(str);
         }
     }
 }
