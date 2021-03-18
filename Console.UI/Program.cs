@@ -6,6 +6,7 @@ using Cryptology.Cardano;
 using Cryptology.Core;
 using Cryptology.Core.Algorithm;
 using Cryptology.Rail.Algorithm;
+using Cryptology.Rsa.Algorithm;
 using Cryptology.Vijender.Algorithm;
 using Unity;
 
@@ -25,7 +26,7 @@ namespace Cryptology.ConsoleUI
             container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Rsa, (c) => new RsaAlgorithm());
             container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Vijender, (c) => new VijenderAlgorithm("hello"));
         }
-
+        
         private static void Main(string[] args)
         {
             ConfigureContainer();
