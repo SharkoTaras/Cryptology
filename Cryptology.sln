@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.ConsoleUI", "Con
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm", "Algorithm", "{CC4912A4-2E0E-496A-BD3C-B26F8F3795C3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Criptology.Affine", "Cryptology.Algorithm\Cryptology.Algorithm.Afine\Criptology.Affine.csproj", "{0B332CDB-0B1A-4690-AEEE-8F88D142A012}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.Affine", "Cryptology.Algorithm\Cryptology.Algorithm.Afine\Cryptology.Affine.csproj", "{0B332CDB-0B1A-4690-AEEE-8F88D142A012}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.Caesar", "Cryptology.Algorithm\Cryptology.Algorithm.Caesar\Cryptology.Caesar.csproj", "{CCCE4DBC-87CC-4FCA-A478-F12297208CBE}"
 EndProject
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.UI", "Cryptology
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.Core", "Cryptology.Core\Cryptology.Core.csproj", "{CF180660-8A3E-493D-8D36-D62112D6BA31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptology.Rsa", "Cryptology.Algorithm\Cryptology.Algorithm.RSA\Cryptology.Rsa.csproj", "{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.Rsa", "Cryptology.Algorithm\Cryptology.Algorithm.RSA\Cryptology.Rsa.csproj", "{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -13,7 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Console.UI\Cryptology.ConsoleUI.csproj" />
     
-    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Afine\Criptology.Affine.csproj" />
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Afine\Cryptology.Affine.csproj" />
     
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Caesar\Cryptology.Caesar.csproj" />
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Cardano\Cryptology.Cardano.csproj" />
