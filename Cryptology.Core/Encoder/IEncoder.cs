@@ -2,6 +2,6 @@
 {
     public interface IEncoder
     {
-        byte[] Encode(string str);
+        string Encode(string text);
     }
 }

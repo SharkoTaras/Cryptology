@@ -2,6 +2,6 @@
 {
     public interface IDecoder
     {
-        string Decode(byte[] bytes);
+        string Decode(string code);
     }
 }

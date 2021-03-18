@@ -11,7 +11,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cryptology.Caesar\Cryptology.Caesar\Cryptology.Caesar.csproj" />
+    <ProjectReference Include="..\Console.UI\Cryptology.ConsoleUI.csproj" />
+    
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Afine\Criptology.Affine.csproj" />
+    
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Caesar\Cryptology.Caesar.csproj" />
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Cardano\Cryptology.Cardano.csproj" />
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Rail\Cryptology.Rail.csproj" />
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Vijender\Cryptology.Vijender.csproj" />
     <ProjectReference Include="..\Cryptology.Core\Cryptology.Core.csproj" />
   </ItemGroup>
 

@@ -53,7 +53,7 @@ namespace Cryptology.UI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Cryptology.UI;component/pages/choosepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Cryptology.UI;V1.0.0.0;component/pages/choosepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\ChoosePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

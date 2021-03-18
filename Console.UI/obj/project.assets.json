@@ -1025,18 +1025,18 @@
     },
     "Criptology.Affine/1.0.0": {
       "type": "project",
-      "path": "../Cryptology.Caesar/Criptology.Afine/Criptology.Affine.csproj",
-      "msbuildProject": "../Cryptology.Caesar/Criptology.Afine/Criptology.Affine.csproj"
+      "path": "../Cryptology.Algorithm/Cryptology.Algorithm.Afine/Criptology.Affine.csproj",
+      "msbuildProject": "../Cryptology.Algorithm/Cryptology.Algorithm.Afine/Criptology.Affine.csproj"
     },
     "Cryptology.Caesar/1.0.0": {
       "type": "project",
-      "path": "../Cryptology.Caesar/Cryptology.Caesar/Cryptology.Caesar.csproj",
-      "msbuildProject": "../Cryptology.Caesar/Cryptology.Caesar/Cryptology.Caesar.csproj"
+      "path": "../Cryptology.Algorithm/Cryptology.Algorithm.Caesar/Cryptology.Caesar.csproj",
+      "msbuildProject": "../Cryptology.Algorithm/Cryptology.Algorithm.Caesar/Cryptology.Caesar.csproj"
     },
     "Cryptology.Cardano/1.0.0": {
       "type": "project",
-      "path": "../Cryptology.Caesar/Cryptology.Cardano/Cryptology.Cardano.csproj",
-      "msbuildProject": "../Cryptology.Caesar/Cryptology.Cardano/Cryptology.Cardano.csproj"
+      "path": "../Cryptology.Algorithm/Cryptology.Algorithm.Cardano/Cryptology.Cardano.csproj",
+      "msbuildProject": "../Cryptology.Algorithm/Cryptology.Algorithm.Cardano/Cryptology.Cardano.csproj"
     },
     "Cryptology.Core/1.0.0": {
       "type": "project",
@@ -1045,13 +1045,13 @@
     },
     "Cryptology.Rail/1.0.0": {
       "type": "project",
-      "path": "../Cryptology.Caesar/Cryptology.Rail/Cryptology.Rail.csproj",
-      "msbuildProject": "../Cryptology.Caesar/Cryptology.Rail/Cryptology.Rail.csproj"
+      "path": "../Cryptology.Algorithm/Cryptology.Algorithm.Rail/Cryptology.Rail.csproj",
+      "msbuildProject": "../Cryptology.Algorithm/Cryptology.Algorithm.Rail/Cryptology.Rail.csproj"
     },
     "Cryptology.Vijender/1.0.0": {
       "type": "project",
-      "path": "../Cryptology.Algorithm/Cryptology.Vijender/Cryptology.Vijender.csproj",
-      "msbuildProject": "../Cryptology.Algorithm/Cryptology.Vijender/Cryptology.Vijender.csproj"
+      "path": "../Cryptology.Algorithm/Cryptology.Algorithm.Vijender/Cryptology.Vijender.csproj",
+      "msbuildProject": "../Cryptology.Algorithm/Cryptology.Algorithm.Vijender/Cryptology.Vijender.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1090,20 +1090,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\Cryptology.Vijender.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Vijender\\Cryptology.Vijender.csproj"
+            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Afine\\Criptology.Affine.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Afine\\Criptology.Affine.csproj"
             },
-            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Criptology.Afine\\Criptology.Affine.csproj"
+            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Caesar\\Cryptology.Caesar.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Caesar\\Cryptology.Caesar.csproj"
             },
-            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\Cryptology.Caesar.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Caesar\\Cryptology.Caesar.csproj"
+            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Cardano\\Cryptology.Cardano.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Cardano\\Cryptology.Cardano.csproj"
             },
-            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\Cryptology.Cardano.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Cardano\\Cryptology.Cardano.csproj"
+            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Rail\\Cryptology.Rail.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Rail\\Cryptology.Rail.csproj"
             },
-            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\Cryptology.Rail.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Caesar\\Cryptology.Rail\\Cryptology.Rail.csproj"
+            "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Vijender\\Cryptology.Vijender.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Algorithm\\Cryptology.Algorithm.Vijender\\Cryptology.Vijender.csproj"
             },
             "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\Cryptology\\Cryptology.Core\\Cryptology.Core.csproj"

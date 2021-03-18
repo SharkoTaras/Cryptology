@@ -3,7 +3,6 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using Cryptology.Caesar.Algorithm;
 using Cryptology.Core;
-using Cryptology.Core.Extensions;
 
 namespace Cryptology.UI
 {
@@ -21,13 +20,13 @@ namespace Cryptology.UI
         #region Constructor
         public CaesarViewModel()
         {
-            this.Algorithm = new CaesarAlgorithm();
-            this.Analyzer = new CaesarFrequencyAnalyzer();
-            this.IsEncode = true;
-            this.Shift = default;
-            this.TextAnalyzingPerformed = false;
-            this.IsAnalyzingCompleted = false;
-            this.DetailsButtonVisibility = Visibility.Collapsed;
+            Algorithm = new CaesarAlgorithm();
+            Analyzer = new CaesarFrequencyAnalyzer();
+            IsEncode = true;
+            Shift = default;
+            TextAnalyzingPerformed = false;
+            IsAnalyzingCompleted = false;
+            DetailsButtonVisibility = Visibility.Collapsed;
         }
         #endregion
 
@@ -42,22 +41,22 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.isAnalyzingCompleted;
+                return isAnalyzingCompleted;
             }
             set
             {
-                if (this.isAnalyzingCompleted != value)
+                if (isAnalyzingCompleted != value)
                 {
-                    this.isAnalyzingCompleted = value;
-                    this.OnProtertyChanged();
+                    isAnalyzingCompleted = value;
+                    OnProtertyChanged();
 
-                    if (this.isAnalyzingCompleted)
+                    if (isAnalyzingCompleted)
                     {
-                        this.DetailsButtonVisibility = Visibility.Visible;
+                        DetailsButtonVisibility = Visibility.Visible;
                     }
                     else
                     {
-                        this.DetailsButtonVisibility = Visibility.Collapsed;
+                        DetailsButtonVisibility = Visibility.Collapsed;
                     }
                 }
             }
@@ -67,14 +66,14 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.detailsButtonVisibility;
+                return detailsButtonVisibility;
             }
             set
             {
-                if (this.detailsButtonVisibility != value)
+                if (detailsButtonVisibility != value)
                 {
-                    this.detailsButtonVisibility = value;
-                    this.OnProtertyChanged();
+                    detailsButtonVisibility = value;
+                    OnProtertyChanged();
                 }
             }
         }
@@ -83,14 +82,14 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.analyzeButtonVisibility;
+                return analyzeButtonVisibility;
             }
             set
             {
-                if (this.analyzeButtonVisibility != value)
+                if (analyzeButtonVisibility != value)
                 {
-                    this.analyzeButtonVisibility = value;
-                    this.OnProtertyChanged();
+                    analyzeButtonVisibility = value;
+                    OnProtertyChanged();
                 }
             }
         }
@@ -99,15 +98,15 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.actionText;
+                return actionText;
             }
 
             set
             {
-                if (this.actionText != value)
+                if (actionText != value)
                 {
-                    this.actionText = value;
-                    this.OnProtertyChanged();
+                    actionText = value;
+                    OnProtertyChanged();
                 }
             }
         }
@@ -116,24 +115,24 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.isEncode;
+                return isEncode;
             }
 
             set
             {
-                if (this.isEncode != value)
+                if (isEncode != value)
                 {
-                    this.isEncode = value;
-                    this.OnProtertyChanged();
-                    if (this.isEncode)
+                    isEncode = value;
+                    OnProtertyChanged();
+                    if (isEncode)
                     {
-                        this.ActionText = "Encode";
-                        this.AnalyzeButtonVisibility = Visibility.Collapsed;
+                        ActionText = "Encode";
+                        AnalyzeButtonVisibility = Visibility.Collapsed;
                     }
                     else
                     {
-                        this.ActionText = "Decode";
-                        this.AnalyzeButtonVisibility = Visibility.Visible;
+                        ActionText = "Decode";
+                        AnalyzeButtonVisibility = Visibility.Visible;
                     }
                 }
             }
@@ -143,15 +142,15 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.shift;
+                return shift;
             }
             set
             {
-                if (this.shift != value)
+                if (shift != value)
                 {
-                    this.shift = value;
-                    this.Algorithm.Shift = value;
-                    this.OnProtertyChanged();
+                    shift = value;
+                    Algorithm.Shift = value;
+                    OnProtertyChanged();
                 }
             }
         }
@@ -160,14 +159,14 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.inputText;
+                return inputText;
             }
             set
             {
-                if (this.inputText != value)
+                if (inputText != value)
                 {
-                    this.inputText = value;
-                    this.OnProtertyChanged();
+                    inputText = value;
+                    OnProtertyChanged();
                 }
             }
         }
@@ -176,14 +175,14 @@ namespace Cryptology.UI
         {
             get
             {
-                return this.outputText;
+                return outputText;
             }
             set
             {
-                if (this.outputText != value)
+                if (outputText != value)
                 {
-                    this.outputText = value;
-                    this.OnProtertyChanged();
+                    outputText = value;
+                    OnProtertyChanged();
                 }
             }
         }
@@ -192,13 +191,13 @@ namespace Cryptology.UI
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Process()
         {
-            if (this.IsEncode)
+            if (IsEncode)
             {
-                this.OutputText = this.Algorithm.Encode(this.InputText).FromBytes();
+                OutputText = Algorithm.Encode(InputText);
             }
             else
             {
-                this.OutputText = this.Algorithm.Decode(this.InputText.ToBytes());
+                OutputText = Algorithm.Decode(InputText);
             }
         }
 
@@ -207,21 +206,21 @@ namespace Cryptology.UI
         {
             try
             {
-                if (this.TextAnalyzingPerformed == false)
+                if (TextAnalyzingPerformed == false)
                 {
-                    using (var reader = new StreamReader(GlobalConstants.TextFilePath, this.Algorithm.Encoding))
+                    using (var reader = new StreamReader(GlobalConstants.TextFilePath, Algorithm.Encoding))
                     {
                         var text = reader.ReadToEnd();
-                        this.Analyzer.AnalyzeText(text);
+                        Analyzer.AnalyzeText(text);
                     }
 
-                    this.TextAnalyzingPerformed = true;
+                    TextAnalyzingPerformed = true;
                 }
 
-                this.Analyzer.AnalyzeCryptoText(this.InputText);
-                this.IsAnalyzingCompleted = true;
+                Analyzer.AnalyzeCryptoText(InputText);
+                IsAnalyzingCompleted = true;
 
-                this.OutputText = this.Analyzer.TryEncode(this.InputText);
+                OutputText = Analyzer.TryEncode(InputText);
             }
             catch (FileNotFoundException e)
             {
