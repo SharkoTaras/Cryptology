@@ -18,14 +18,11 @@ namespace Cryptology.ConsoleUI
         private static void ConfigureContainer()
         {
             container = new UnityContainer();
-            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Caesar, (c) => new CaesarAlgorithm(3));
-
             container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Affine, (c) => new AffineAlgorithm(2, 5));
-
+            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Caesar, (c) => new CaesarAlgorithm(3));
             container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Cardano, (c) => new CardanoAlgorithm("2508"));
-
             container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Rail, (c) => new RailAlgorithm(3));
-
+            container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Rsa, (c) => new RsaAlgorithm());
             container.RegisterFactory<IAlgorithm>(GlobalConstants.Algorithms.Vijender, (c) => new VijenderAlgorithm("hello"));
         }
 

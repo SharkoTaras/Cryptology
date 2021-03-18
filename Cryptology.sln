@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.UI", "Cryptology
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cryptology.Core", "Cryptology.Core\Cryptology.Core.csproj", "{CF180660-8A3E-493D-8D36-D62112D6BA31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptology.Algorithm.RSA", "Cryptology.Algorithm\Cryptology.Algorithm.RSA\Cryptology.Algorithm.RSA.csproj", "{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{CF180660-8A3E-493D-8D36-D62112D6BA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF180660-8A3E-493D-8D36-D62112D6BA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF180660-8A3E-493D-8D36-D62112D6BA31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{29560D71-21FE-4DDF-8DC4-44E9B5BF26C9} = {CC4912A4-2E0E-496A-BD3C-B26F8F3795C3}
 		{8DC6F68D-0BE0-486C-9948-66DA5EA54257} = {CC4912A4-2E0E-496A-BD3C-B26F8F3795C3}
 		{F0CF2D3C-6AD8-44FF-B354-21EDD7BE88F3} = {CC4912A4-2E0E-496A-BD3C-B26F8F3795C3}
+		{CCF3C1A5-EEA7-48E7-996E-8C7A609BB939} = {CC4912A4-2E0E-496A-BD3C-B26F8F3795C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A30A7E4-586A-4D95-8899-30E3C20BD434}
