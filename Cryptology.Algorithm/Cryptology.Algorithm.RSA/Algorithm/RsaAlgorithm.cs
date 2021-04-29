@@ -1,7 +1,10 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Numerics;
+using System.Runtime.CompilerServices;
 using Cryptology.Core.Algorithm;
+using Cryptology.Core.Extensions;
 using Cryptology.Rsa.Decoder;
 using Cryptology.Rsa.Encoder;
+using Cryptology.Rsa.Model;
 
 namespace Cryptology.Rsa.Algorithm
 {
@@ -10,18 +13,25 @@ namespace Cryptology.Rsa.Algorithm
         #region Private fields
         private RsaDecoder Decoder;
         private RsaEncoder Encoder;
+        private BigInteger P;
+        private BigInteger Q;
         #endregion
 
         #region Constructors
-        public RsaAlgorithm()
+        public RsaAlgorithm(BigInteger p, BigInteger q)
         {
-            Decoder = new RsaDecoder();
-            Encoder = new RsaEncoder();
+            P = p;
+            Q = q;
+            Init();
+            Decoder = new RsaDecoder(PrivateKey);
+            Encoder = new RsaEncoder(PublicKey);
         }
         #endregion
 
         #region Properties
+        public PublicKey PublicKey { get; set; }
 
+        public PrivateKey PrivateKey { get; set; }
         #endregion
 
         #region IAlgorithm
@@ -32,11 +42,34 @@ namespace Cryptology.Rsa.Algorithm
         public string Encode(string text) => Encoder.Encode(text);
         #endregion
 
-        #region Overrides
-        public override string ToString()
+        private void Init()
         {
-            return base.ToString();
+            var n = BigInteger.Multiply(P, Q);
+            var phin = BigInteger.Multiply(P - 1, Q - 1);
+
+            BigInteger e = default;
+            for (var i = 3; i < phin; i++)
+            {
+                if (i.IsCoPrime(phin))
+                {
+                    e = i;
+                    break;
+                }
+            }
+            BigInteger d = default;
+            for (var i = 2; i < phin; i++)
+            {
+                if ((i * e) % phin == 1)
+                {
+                    d = i;
+                    break;
+                }
+            }
+
+            PublicKey = new PublicKey(n, e);
+            PrivateKey = new PrivateKey(n, d);
+
+            var t = (e * d) % phin;
         }
-        #endregion
     }
 }

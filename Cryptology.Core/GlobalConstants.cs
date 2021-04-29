@@ -14,6 +14,7 @@ namespace Cryptology.Core
             public const string Rail = nameof(Rail);
             public const string Rsa = nameof(Rsa);
             public const string Vijender = nameof(Vijender);
+            public const string ElGamal = nameof(ElGamal);
         }
     }
 }

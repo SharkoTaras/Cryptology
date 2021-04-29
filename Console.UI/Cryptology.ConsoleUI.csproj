@@ -15,6 +15,8 @@
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Afine\Cryptology.Affine.csproj" />
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Caesar\Cryptology.Caesar.csproj" />
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Cardano\Cryptology.Cardano.csproj" />
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.DdiffieHellman\Cryptology.Algorithm.DiffieHellman.csproj" />
+    <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.ElGamal\Cryptology.ElGamal.csproj" />
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Rail\Cryptology.Rail.csproj" />
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.RSA\Cryptology.Rsa.csproj" />
     <ProjectReference Include="..\Cryptology.Algorithm\Cryptology.Algorithm.Vijender\Cryptology.Vijender.csproj" />

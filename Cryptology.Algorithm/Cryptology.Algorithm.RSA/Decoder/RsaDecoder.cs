@@ -1,18 +1,20 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Text;
 using Cryptology.Core.Decoder;
+using Cryptology.Rsa.Model;
 
 namespace Cryptology.Rsa.Decoder
 {
     public class RsaDecoder : IDecoder
     {
+        private PrivateKey Key;
+
         #region Constructors
-        public RsaDecoder()
+        public RsaDecoder(PrivateKey key)
         {
+            Key = key;
         }
-
-        #endregion
-
-        #region Properties
 
         #endregion
 
@@ -20,7 +22,14 @@ namespace Cryptology.Rsa.Decoder
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string Decode(string code)
         {
-            throw new System.NotImplementedException();
+            var text = new StringBuilder();
+            foreach (var item in code)
+            {
+                var c = BigInteger.ModPow((int)item, Key.D, Key.N);
+                text.Append((char)c);
+            }
+
+            return text.ToString();
         }
         #endregion
     }

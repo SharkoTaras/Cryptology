@@ -1,18 +1,20 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Text;
 using Cryptology.Core.Encoder;
+using Cryptology.Rsa.Model;
 
 namespace Cryptology.Rsa.Encoder
 {
     public class RsaEncoder : IEncoder
     {
+        private PublicKey Key;
+
         #region Constructors
-        public RsaEncoder()
+        public RsaEncoder(PublicKey key)
         {
+            Key = key;
         }
-
-        #endregion
-
-        #region Properties
 
         #endregion
 
@@ -20,14 +22,14 @@ namespace Cryptology.Rsa.Encoder
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public string Encode(string text)
         {
-            throw new System.NotImplementedException();
-        }
-        #endregion
+            var code = new StringBuilder();
+            foreach (var item in text)
+            {
+                var m = BigInteger.ModPow((int)item, Key.E, Key.N);
+                code.Append((char)m);
+            }
 
-        #region Overrides
-        public override string ToString()
-        {
-            return base.ToString();
+            return code.ToString();
         }
         #endregion
     }

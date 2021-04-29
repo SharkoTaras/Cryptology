@@ -4,14 +4,13 @@ namespace Cryptology.Core.Utils
 {
     public class Checker
     {
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        public void ThrowIfNull<T>(T obj, string message = null)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void Ensure(bool condition, string message = null)
         {
-            if (obj is null)
+            if (!condition)
             {
-                throw new System.ArgumentNullException("obj", message);
+                ExeptionHelper.Throw(message);
             }
         }
-
     }
 }

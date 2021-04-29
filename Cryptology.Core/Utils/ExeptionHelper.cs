@@ -13,5 +13,17 @@ namespace Cryptology.Core.Utils
                 throw new Exception(message);
             }
         }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static void ThrowIfNull<T>(T obj, string message = null)
+        {
+            if (obj is null)
+            {
+                throw new System.ArgumentNullException("obj", message);
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public static void Throw(string message = null) => throw new Exception(message);
     }
 }
